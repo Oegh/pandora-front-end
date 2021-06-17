@@ -7,8 +7,10 @@ const routes: Routes = [
   component: PagesComponent,
   children: [
     { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+    { path: 'strategy', loadChildren: () => import('./estrategias/estrategias.module').then(m => m.EstrategiasModule) },
     { path: '**', redirectTo: 'home'}
-  ] }
+  ] },
+  
 ];
 
 @NgModule({
