@@ -21,7 +21,7 @@ export class EstrategiasComponent implements OnInit {
   expandedElement: PeriodicElement | null;
 
   constructor() { 
-    this.expandedElement = this.dataSource[0];
+    this.expandedElement = null;
   }
 
   ngOnInit(): void {
