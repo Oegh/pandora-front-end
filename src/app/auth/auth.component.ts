@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 //import { LoginService } from './services/login.service';
 import { AuthService } from '../core/services/auth.service';
+import { UserModel } from '../models/user.model';
 
 @Component({
   selector: 'app-auth',
@@ -26,7 +27,6 @@ export class AuthComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log("test");
     let userInput: string = this.loginForm.get('user')?.value;
     let passInput: string = this.loginForm.get('pass')?.value;
 
@@ -34,6 +34,17 @@ export class AuthComponent implements OnInit {
       this.showError = true;
     }else{
       this.showError = false;
+    }
+
+    if(!this.showError) {
+      let user = new UserModel();
+      user.name = userInput;
+      user.pass = passInput;
+      user.userName = userInput;
+
+      this._authService.loginBasic(user).subscribe( data => {
+        console.log(data);
+      })
     }
 
   }

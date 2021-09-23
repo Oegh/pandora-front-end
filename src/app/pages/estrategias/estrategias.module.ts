@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { EstrategiasRoutingModule } from './estrategias-routing.module';
 import { EstrategiasComponent } from './estrategias.component';
+import { MatTableModule } from '@angular/material/table'; 
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { EstrategiasComponent } from './estrategias.component';
   ],
   imports: [
     CommonModule,
-    EstrategiasRoutingModule
+    EstrategiasRoutingModule,
+    MatTableModule
   ]
 })
 export class EstrategiasModule { }

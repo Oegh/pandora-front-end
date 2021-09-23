@@ -1,147 +1,302 @@
-<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block  h-100 overflow-auto bg-light sidebar collapse">
-    <div class="position-sticky pt-3">
-        <ul class="nav flex-column">
-            <!-- Estrategias -->
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#estrategias-collapse" aria-expanded="true">
-                    <span data-feather="package"></span> Estrategias
-                </a>
-                <div class="collapse" id="estrategias-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" routerLinkActive="active" class="link-dark rounded">Instituto</a></li>
-                        <li><a href="#" class="link-dark rounded">Facultad</a></li>
-                        <li><a href="#" class="link-dark rounded">Departamento</a></li>
-                    </ul>
-                </div>
-            </li>
+<mat-nav-list>
+    <!-- Estrategias -->
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <p mat-line>Estrategias</p>
+        </mat-expansion-panel-header>
+        <mat-list style="margin-left:10px;">
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Instituto</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Facultad</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Departamento</p>
+                    </a>
+                </mat-list-item>
+            </div>
+        </mat-list>
+    </mat-expansion-panel>
 
-            <!-- Áreas de resultados claves -->
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#arc-collapse" aria-expanded="true">
-                    <span data-feather="package"></span> Áreas de resultados claves
-                </a>
-                <div class="collapse" id="arc-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" routerLinkActive="active" class="link-dark rounded">Instituto</a></li>
-                        <li><a href="#" class="link-dark rounded">Facultad</a></li>
-                        <li><a href="#" class="link-dark rounded">Departamento</a></li>
-                    </ul>
-                </div>
-            </li>
+    <!-- ARC -->
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <p mat-line>Áreas de resultados claves</p>
+        </mat-expansion-panel-header>
+        <mat-list style="margin-left:10px;">
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Instituto</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Facultad</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Departamento</p>
+                    </a>
+                </mat-list-item>
+            </div>
+        </mat-list>
+    </mat-expansion-panel>
 
-            <!-- Trabajo Docente educativo -->
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#tde-collapse" aria-expanded="true">
-                    <span data-feather="pen-tool"></span> Trabajo Docente educativo
-                </a>
-                <div class="collapse" id="tde-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" routerLinkActive="active" class="link-dark rounded">Actualizar Asignaturas Activas</a></li>
-                        <li><a href="#" class="link-dark rounded">Cantidad de evaluaciones parciales</a></li>
-                        <li><a href="#" class="link-dark rounded">Carga docente del departamento</a></li>
-                        <li><a href="#" class="link-dark rounded">Cubrimiento de carga docente</a></li>
-                        <li><a href="#" class="link-dark rounded">Carga docente por profesor</a></li>
-                        <li><a href="#" class="link-dark rounded">Asignaciones por asignatura</a></li>
-                        <li><a href="#" class="link-dark rounded">Trabajo docente por profesor</a></li>
-                        <li><a href="#" class="link-dark rounded">Otras tareas</a></li>
-                    </ul>
-                </div>
-            </li>
+    <!-- Trabajo Docente educativo -->
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <p mat-line>Trabajo Docente educativo</p>
+        </mat-expansion-panel-header>
+        <mat-list style="margin-left:10px;">
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Actualizar Asignaturas Activas</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Cantidad de evaluaciones parciales</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Carga docente del departamento</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Cubrimiento de carga docente</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Carga docente por profesor</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Asignaciones por asignatura</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Trabajo docente por profesor</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Otras tareas</p>
+                    </a>
+                </mat-list-item>
+            </div>
+        </mat-list>
+    </mat-expansion-panel>
 
-            <!-- Organizacion -->
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#organizacion-collapse" aria-expanded="true">
-                    <span data-feather="briefcase"></span> Organizacion
-                </a>
-                <div class="collapse" id="organizacion-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" class="link-dark rounded">Trabajo Político-Ideológico</a></li>
-                        <li><a href="#" class="link-dark rounded">Trabajo Metodológico</a></li>
-                        <li><a href="#" class="link-dark rounded">Investigación y Postgrado</a></li>
-                        <li><a href="#" class="link-dark rounded">Superación</a></li>
-                        <li><a href="#" class="link-dark rounded">Extension universitaria</a></li>
-                    </ul>
-                </div>
-            </li>
+    <!-- Organizacion -->
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <p mat-line>Organización</p>
+        </mat-expansion-panel-header>
+        <mat-list style="margin-left: 10px;">
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Trabajo Político-Ideológico</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Trabajo Metodológico</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Investigación y Postgrado</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Superación</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Extensión universitaria</p>
+                    </a>
+                </mat-list-item>
+            </div>
+        </mat-list>
+    </mat-expansion-panel>
 
-            <!-- Control -->
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#control-collapse" aria-expanded="true">
-                    <span data-feather="trello"></span> Control
-                </a>
-                <div class="collapse" id="control-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" routerLinkActive="active" class="link-dark rounded active">Evaluación Mensual</a></li>
-                        <li><a href="#" class="link-dark rounded">Evaluación Anual</a></li>
-                    </ul>
-                </div>
-            </li>
+    <!-- Control -->
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <p mat-line>Control</p>
+        </mat-expansion-panel-header>
+        <mat-list style="margin-left: 10px;">
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Evaluación Mensual</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Evaluación Anual</p>
+                    </a>
+                </mat-list-item>
+            </div>
+        </mat-list>
+    </mat-expansion-panel>
 
-            <!-- Reportes -->
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#reportes-collapse" aria-expanded="true">
-                    <span data-feather="bar-chart-2"></span> Reportes
-                </a>
-                <div class="collapse" id="reportes-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" routerLinkActive="active" class="link-dark rounded active">Plan de resultados del profesor</a></li>
-                        <li><a href="#" class="link-dark rounded">Evaluación Mensual</a></li>
-                        <li><a href="#" class="link-dark rounded">Evaluación Anual</a></li>
-                        <li><a href="#" class="link-dark rounded">Plan metodológico</a></li>
-                        <li><a href="#" class="link-dark rounded">Descargar Plugin para Office</a></li>
-                        <li><a href="#" class="link-dark rounded">Actividades por departamento</a></li>
-                        <li><a href="#" class="link-dark rounded">Carga docente del departamento</a></li>
-                        <li><a href="#" class="link-dark rounded">Carga docente por profesores</a></li>
-                    </ul>
-                </div>
-            </li>
+    <!-- Reportes -->
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <p mat-line>Reportes</p>
+        </mat-expansion-panel-header>
+        <mat-list style="margin-left: 10px;">
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Evaluación Mensual</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Evaluación Anual</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Plan metodológico</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Descargar Plugin para Office</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Actividades por departamento</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Carga docente del departamento</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Carga docente por profesores</p>
+                    </a>
+                </mat-list-item>
+            </div>
+        </mat-list>
+    </mat-expansion-panel>
 
-            <!-- Configuracion -->
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#config-collapse" aria-expanded="true">
-                    <span data-feather="settings"></span> Configuración
-                </a>
-                <div class="collapse" id="config-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" routerLinkActive="active" class="link-dark rounded active">Plan de resultados del profesor</a></li>
-                        <li><a href="#" class="link-dark rounded">Asesores</a></li>
-                        <li><a href="#" class="link-dark rounded">Colaboradores del departamento</a></li>
-                        <li><a href="#" class="link-dark rounded">Jefes de Disciplina del departamento</a></li>
-                        <li><a href="#" class="link-dark rounded">Gestion de roles de los usuarios</a></li>
-                        <li><a href="#" class="link-dark rounded">Colectivo de carrera</a></li>
-                        <li><a href="#" class="link-dark rounded">Colectivo de año</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-
-        <!-- <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Saved reports</span>
-            <a class="link-secondary" href="#" aria-label="Add a new report">
-                <span data-feather="plus-circle"></span>
-            </a>
-        </h6>
-        <ul class="nav flex-column mb-2">
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <span data-feather="file-text"></span> Current month
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <span data-feather="file-text"></span> Last quarter
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <span data-feather="file-text"></span> Social engagement
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <span data-feather="file-text"></span> Year-end sale
-                </a>
-            </li>
-        </ul> -->
-    </div>
-</nav>
+    <!-- Configuracion -->
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <p mat-line>Configuración</p>
+        </mat-expansion-panel-header>
+        <mat-list style="margin-left: 10px;">
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Asesores</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Colaboradores del departamento</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Jefes de Disciplina del departamento</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Gestion de roles de los usuarios</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Colectivo de carrera</p>
+                    </a>
+                </mat-list-item>
+            </div>
+            <div>
+                <mat-list-item style="overflow: hidden;">
+                    <a style="cursor: pointer;">
+                        <p mat-line>Colectivo de año</p>
+                    </a>
+                </mat-list-item>
+            </div>
+        </mat-list>
+    </mat-expansion-panel>
+</mat-nav-list>

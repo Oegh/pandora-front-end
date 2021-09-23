@@ -1,11 +1,18 @@
-<app-nav-bar></app-nav-bar>
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar color="primary" class="example-toolbar">
+        <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+        <app-nav-bar></app-nav-bar>
+    </mat-toolbar>
 
-<div class="container-fluid">
-    <div class="row">
-        <app-side-bar></app-side-bar>
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav class="sidebar-example" #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+            <app-side-bar></app-side-bar>
+        </mat-sidenav>
 
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <router-outlet></router-outlet>
-        </main>
-    </div>
+        <mat-sidenav-content>
+            <div style="margin-left: 20px; margin-right: 20px;">
+                <router-outlet></router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
 </div>

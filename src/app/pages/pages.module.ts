@@ -5,6 +5,8 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
 
+import {MatExpansionModule} from '@angular/material/expansion'
+
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     PagesRoutingModule,
-    SharedModule
+    SharedModule,
+    MatExpansionModule
   ]
 })
 export class PagesModule { }

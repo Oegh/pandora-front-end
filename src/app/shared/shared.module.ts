@@ -11,6 +11,8 @@ import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
 import { MatMenuModule } from "@angular/material/menu";
 
+import {MatExpansionModule} from '@angular/material/expansion'
+
 @NgModule({
   declarations: [
     NavBarComponent,
@@ -26,6 +28,7 @@ import { MatMenuModule } from "@angular/material/menu";
     MatDividerModule,
     MatListModule,
     MatMenuModule,
+    MatExpansionModule
   ],
   exports: [
     NavBarComponent,

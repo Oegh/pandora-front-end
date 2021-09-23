@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { UserModel } from '../../models/user.model';
@@ -10,7 +10,8 @@ import { map } from 'rxjs/operators';
 })
 export class AuthService {
 
-  private url = 'http://..... url to LDAP';
+  private url = 'https://..... url to LDAP';
+  private loginUrl = 'https://api.cujae.edu.cu/user/'
   userToken: string | null = null;
 
   constructor(
@@ -21,6 +22,25 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem('token');
+  }
+
+  loginBasic(user: UserModel) {
+    const base64Pass = btoa(user.userName+":"+user.pass);
+
+    const headerDict = {
+      'Authorization': `Basic ${base64Pass}`
+    }
+
+    console.log(base64Pass);
+
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Basic ${base64Pass}`});
+    let options = { headers: headers };
+
+    headers.append('Authorization', `Basic ${base64Pass}`);
+
+    return this._http.post(`${this.loginUrl}${user.userName}`, null, options)
   }
 
   login(user: UserModel) {
