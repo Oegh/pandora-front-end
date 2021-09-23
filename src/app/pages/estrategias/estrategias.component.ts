@@ -16,7 +16,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 
 export class EstrategiasComponent implements OnInit {
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['Estrategia', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
   expandedElement: PeriodicElement | null;
 
@@ -31,28 +31,22 @@ export class EstrategiasComponent implements OnInit {
 
 export interface PeriodicElement {
   name: string;
-  position: number;
+  Estrategia: number;
   weight: number;
   symbol: string;
   description: string;
 }
 
-export class TableExpandableRowsExample {
-  dataSource = ELEMENT_DATA;
-  columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
-  //expandedElement: PeriodicElement  = "NULL";
-}
-
 const ELEMENT_DATA: PeriodicElement[] = [
   {
-    position: 1,
+    Estrategia: 1,
     name: 'Hydrogen',
     weight: 1.0079,
     symbol: 'H',
     description: `Hydrogen is a chemical element with symbol H and atomic number 1. With a standard
         atomic weight of 1.008, hydrogen is the lightest element on the periodic table.`
   }, {
-    position: 2,
+    Estrategia: 2,
     name: 'Helium',
     weight: 4.0026,
     symbol: 'He',
@@ -60,7 +54,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         colorless, odorless, tasteless, non-toxic, inert, monatomic gas, the first in the noble gas
         group in the periodic table. Its boiling point is the lowest among all the elements.`
   }, {
-    position: 3,
+    Estrategia: 3,
     name: 'Lithium',
     weight: 6.941,
     symbol: 'Li',
@@ -68,7 +62,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         silvery-white alkali metal. Under standard conditions, it is the lightest metal and the
         lightest solid element.`
   }, {
-    position: 4,
+    Estrategia: 4,
     name: 'Beryllium',
     weight: 9.0122,
     symbol: 'Be',
@@ -76,7 +70,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         relatively rare element in the universe, usually occurring as a product of the spallation of
         larger atomic nuclei that have collided with cosmic rays.`
   }, {
-    position: 5,
+    Estrategia: 5,
     name: 'Boron',
     weight: 10.811,
     symbol: 'B',
@@ -84,7 +78,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         by cosmic ray spallation and supernovae and not by stellar nucleosynthesis, it is a
         low-abundance element in the Solar system and in the Earth's crust.`
   }, {
-    position: 6,
+    Estrategia: 6,
     name: 'Carbon',
     weight: 12.0107,
     symbol: 'C',
@@ -92,14 +86,14 @@ const ELEMENT_DATA: PeriodicElement[] = [
         and tetravalent—making four electrons available to form covalent chemical bonds. It belongs
         to group 14 of the periodic table.`
   }, {
-    position: 7,
+    Estrategia: 7,
     name: 'Nitrogen',
     weight: 14.0067,
     symbol: 'N',
     description: `Nitrogen is a chemical element with symbol N and atomic number 7. It was first
         discovered and isolated by Scottish physician Daniel Rutherford in 1772.`
   }, {
-    position: 8,
+    Estrategia: 8,
     name: 'Oxygen',
     weight: 15.9994,
     symbol: 'O',
@@ -107,7 +101,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
          the chalcogen group on the periodic table, a highly reactive nonmetal, and an oxidizing
          agent that readily forms oxides with most elements as well as with other compounds.`
   }, {
-    position: 9,
+    Estrategia: 9,
     name: 'Fluorine',
     weight: 18.9984,
     symbol: 'F',
@@ -115,7 +109,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         lightest halogen and exists as a highly toxic pale yellow diatomic gas at standard
         conditions.`
   }, {
-    position: 10,
+    Estrategia: 10,
     name: 'Neon',
     weight: 20.1797,
     symbol: 'Ne',
