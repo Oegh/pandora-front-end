@@ -16,7 +16,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 
 export class EstrategiasComponent implements OnInit {
 
-  displayedColumns: string[] = ['Estrategia', ' '];
+  displayedColumns: string[] = ['Estrategias', ' '];
   dataSource = ELEMENT_DATA;
   expandedElement: PeriodicElement | null;
 
@@ -30,19 +30,19 @@ export class EstrategiasComponent implements OnInit {
 }
 
 export interface PeriodicElement {
-  Estrategia: string;
+  Estrategias: string;
   description: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {
-    Estrategia: "ESTRATEGIA: GESTIÓN DE LA EDUCACIÓN SUPERIOR",
+    Estrategias: "ESTRATEGIA: GESTIÓN DE LA EDUCACIÓN SUPERIOR",
     description: `Desarrollar el trabajo político ideológico con los cuadros, trabajadores y estudiantes, para alcanzar las transformaciones necesarias que consoliden un claustro revolucionario de excelencia y formen profesionales competentes comprometidos con la Revolución, que sean capaces de contribuir a la implementación de los Lineamientos de la Política Económica y Social del Partido y la Revolución y enfrentar a la subversión ideológica del enemigo.`
   }, {
-    Estrategia: "ESTRATEGIA: GESTIÓN DE LA EDUCACIÓN SUPERIOR",
+    Estrategias: "ESTRATEGIA: GESTIÓN DE LA EDUCACIÓN SUPERIOR",
     description: `Desarrollar el trabajo político ideológico con los cuadros, trabajadores y estudiantes, para alcanzar las transformaciones necesarias que consoliden un claustro revolucionario de excelencia y formen profesionales competentes comprometidos con la Revolución, que sean capaces de contribuir a la implementación de los Lineamientos de la Política Económica y Social del Partido y la Revolución y enfrentar a la subversión ideológica del enemigo.`
   }, {
-    Estrategia: "ESTRATEGIA: GESTIÓN DE LA EDUCACIÓN SUPERIOR",
+    Estrategias: "ESTRATEGIA: GESTIÓN DE LA EDUCACIÓN SUPERIOR",
     description: `Desarrollar el trabajo político ideológico con los cuadros, trabajadores y estudiantes, para alcanzar las transformaciones necesarias que consoliden un claustro revolucionario de excelencia y formen profesionales competentes comprometidos con la Revolución, que sean capaces de contribuir a la implementación de los Lineamientos de la Política Económica y Social del Partido y la Revolución y enfrentar a la subversión ideológica del enemigo.`
   }, 
 ];

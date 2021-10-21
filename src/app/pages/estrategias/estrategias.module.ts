@@ -6,6 +6,8 @@ import { EstrategiasComponent } from './estrategias.component';
 import { MatTableModule } from '@angular/material/table'; 
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button'; 
+import {MatMenuModule} from '@angular/material/menu'; 
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -21,7 +23,9 @@ import {MatButtonModule} from '@angular/material/button';
     EstrategiasRoutingModule,
     MatTableModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule,
+    MatDialogModule
   ]
 })
 export class EstrategiasModule { }
