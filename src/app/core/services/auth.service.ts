@@ -10,8 +10,10 @@ import { map } from 'rxjs/operators';
 })
 export class AuthService {
 
-  private url = 'https://..... url to LDAP';
+ 
   private loginUrl = 'https://api.cujae.edu.cu/user/'
+  private nodeApiUrl = 'http://localhost:4001/'
+  private url = this.nodeApiUrl;
   userToken: string | null = null;
 
   constructor(
@@ -22,6 +24,16 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem('token');
+  }
+
+  loginNode(user: UserModel) {
+    const data = {
+      username: user.userName, 
+      password: user.pass, 
+      audience: 'pandora',
+    }
+
+    return this._http.post(`${this.nodeApiUrl}/auth`,data)
   }
 
   loginBasic(user: UserModel) {
@@ -45,12 +57,13 @@ export class AuthService {
 
   login(user: UserModel) {
     const authData = {
-      user: user.userName,
-      password: user.pass
+      username: user.userName, 
+      password: user.pass, 
+      audience: 'pandora'
     };
 
     return this._http.post(
-      `${ this.url }loginUser`,
+      `${ this.url }auth`,
       authData
     ).pipe(
       map( (res:any) => {

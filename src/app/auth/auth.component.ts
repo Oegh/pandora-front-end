@@ -42,8 +42,9 @@ export class AuthComponent implements OnInit {
       user.pass = passInput;
       user.userName = userInput;
 
-      this._authService.loginBasic(user).subscribe( data => {
+      this._authService.login(user).subscribe( data => {
         console.log(data);
+        console.log(this._authService.isAuthenticated());
       })
     }
 
