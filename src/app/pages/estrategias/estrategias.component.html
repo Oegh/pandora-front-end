@@ -1,7 +1,7 @@
 <h2>Estrategias</h2>
 
 <div class="demo-button-container">
-    <button class="demo-button" type="button" class="btn btn-success" (click)="open(content)">Añadir Estrategia</button>
+    <button class="demo-button" type="button" class="btn btn-success" (click)="open(contentInsert)">Añadir Estrategia</button>
 </div>
 
 <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
@@ -48,7 +48,7 @@
 </table>
 
 <!--Modal Insetar Estrategia-->
-<ng-template #content let-modal>
+<ng-template #contentInsert let-modal>
     <div class="modal-header">
         <h4 class="modal-title" id="modal-basic-title">Datos para anadir una estrategia</h4>
         <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
@@ -100,6 +100,6 @@
         </form>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Insertar</button>
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Editar</button>
     </div>
 </ng-template>
