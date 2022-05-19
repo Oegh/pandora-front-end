@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {MediaMatcher} from '@angular/cdk/layout';
+import {ChangeDetectorRef, OnDestroy} from '@angular/core';
+import { AuthService } from 'src/app/core/services/auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -7,12 +11,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit  {
+  mobileQuery: MediaQueryList;
 
-  constructor() { 
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, public authService: AuthService, private router: Router) { 
+    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
   ngOnInit(): void {
   }
+
+  ngOnDestroy(): void {
+    this.mobileQuery.removeListener(this._mobileQueryListener);
+  }
+
+  closeSession() {
+    this.authService.logout();
+    this.router.navigate(['login']);
+  }
+
+  private _mobileQueryListener: () => void;
 
 
 }

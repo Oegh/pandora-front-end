@@ -1,7 +1,7 @@
 <h2>Estrategias</h2>
 
 <div class="demo-button-container">
-    <button class="demo-button" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addStrategyModal" data-bs-target="#staticBackdrop">Añadir Estrategia</button>
+    <button class="demo-button" type="button" class="btn btn-success" (click)="open(contentInsert)">Añadir Estrategia</button>
 </div>
 
 <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
@@ -17,7 +17,7 @@
                 <button mat-menu-item>Instituto</button>
                 <button mat-menu-item>Facultad</button>
                 <button mat-menu-item>Departamento</button>
-                <button mat-menu-item>Editar</button>
+                <button mat-menu-item (click)="open(contentEdit)">Editar</button>
                 <button mat-menu-item>Eliminar</button>
             </mat-menu>
 
@@ -46,3 +46,60 @@
     </tr>
     <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
 </table>
+
+<!--Modal Insetar Estrategia-->
+<ng-template #contentInsert let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Datos para anadir una estrategia</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group row">
+                <label for="estrategy">Nombre de la estrategia</label>
+                <div class="input-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Estrategia"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="exampleFormControlTextarea1">Objetivos de la estrategia</label>
+                <div class="input-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Objetivos"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Insertar</button>
+    </div>
+</ng-template>
+
+<!-- Modal Editar -->
+
+<ng-template #contentEdit let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Editar la estrategia</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+  </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group row">
+                <label for="estrategy">Nombre de la estrategia</label>
+                <div class="input-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Estrategia"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="exampleFormControlTextarea1">Objetivos de la estrategia</label>
+                <div class="input-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Objetivos"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Editar</button>
+    </div>
+</ng-template>

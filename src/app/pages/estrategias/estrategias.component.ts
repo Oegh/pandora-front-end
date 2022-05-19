@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+// import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-estrategias',
@@ -16,15 +17,36 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 
 export class EstrategiasComponent implements OnInit {
 
+  closeResult = '';
   displayedColumns: string[] = ['Estrategias', ' '];
   dataSource = ELEMENT_DATA;
   expandedElement: PeriodicElement | null;
 
-  constructor() { 
+  constructor(/*private modalService: NgbModal*/) {
     this.expandedElement = null;
+
   }
 
   ngOnInit(): void {
+  }
+
+  open(content: any) {
+    // this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+    //   this.closeResult = `Closed with: ${result}`;
+    // }, (reason) => {
+    //   this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    // });
+  }
+
+  private getDismissReason(reason: any): string {
+    // if (reason === ModalDismissReasons.ESC) {
+    //   return 'by pressing ESC';
+    // } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+    //   return 'by clicking on a backdrop';
+    // } else {
+    //   return `with: ${reason}`;
+    // }
+    return `with: ${reason}`;
   }
 
 }
@@ -44,5 +66,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   }, {
     Estrategias: "ESTRATEGIA: GESTIÓN DE LA EDUCACIÓN SUPERIOR",
     description: `Desarrollar el trabajo político ideológico con los cuadros, trabajadores y estudiantes, para alcanzar las transformaciones necesarias que consoliden un claustro revolucionario de excelencia y formen profesionales competentes comprometidos con la Revolución, que sean capaces de contribuir a la implementación de los Lineamientos de la Política Económica y Social del Partido y la Revolución y enfrentar a la subversión ideológica del enemigo.`
-  }, 
+  },
 ];
+
+
+
