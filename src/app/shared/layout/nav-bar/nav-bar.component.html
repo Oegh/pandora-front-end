@@ -1,1 +1,23 @@
-<h1 class="example-app-name" style="padding-left: 10px;">Pandora</h1>
+<mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <span style="padding-left: 10px;">Pandora</span>
+    <span class="example-spacer"></span>
+    <button mat-button [matMenuTriggerFor]="menu">
+            {{authService.user.givenName}}
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="closeSession()">Cerrar Sesión</button>
+    </mat-menu>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-sidenav-container">
+    <mat-sidenav class="sidebar-example" #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="40">
+        <app-side-bar></app-side-bar>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div style="margin-left: 20px; margin-right: 20px;">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

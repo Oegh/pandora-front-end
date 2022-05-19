@@ -11,6 +11,12 @@
                 <div style='padding: 5px;' *ngIf="showError" class="alert alert-danger mb-2" role="alert">
                     Inserte todos los campos
                 </div>
+                <div style='padding: 5px;' *ngIf="authError" class="alert alert-danger mb-2" role="alert">
+                    Nombre de usuario o contraseña incorrecta.
+                </div>
+                <div style='padding: 5px;' *ngIf="serverError" class="alert alert-danger mb-2" role="alert">
+                    Ocurrio un error intentando conectarse al servidor. Intentelo más tarde.
+                </div>
                 <!-- wrap-input100 validate-input -->
                 <div class="wrap-input100 validate-input ">
                     <!--  input100  -->
