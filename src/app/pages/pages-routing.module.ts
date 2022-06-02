@@ -3,14 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { PagesComponent } from './pages.component';
 
 const routes: Routes = [
-  { path: '', 
+  { path: '',
   component: PagesComponent,
   children: [
     { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+    { path: 'cargadepartamento', loadChildren: () => import('./cargadepartamento/cargadepartamento.module').then(m => m.CargadepartamentoModule) },
     { path: 'strategy', loadChildren: () => import('./estrategias/estrategias.module').then(m => m.EstrategiasModule) },
     { path: '**', redirectTo: 'home'}
   ] },
-  
+
 ];
 
 @NgModule({
