@@ -1,1 +1,41 @@
-<p>cargadepartamento works!</p>
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-30 p-b-50">
+            <mat-card>
+                <h5>Seleccione cómo desea trabajar</h5>
+                <mat-divider></mat-divider>
+                <h6>Fecha del último enlace con Pandora</h6>
+                <mat-form-field appearance="fill">
+                    <mat-label>Seleccione la opción</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </mat-card>
+
+            <mat-card>
+                <h5>Gestión de la carga docente</h5>
+                <mat-divider></mat-divider>
+                <mat-form-field appearance="fill">
+                    <mat-label>Curso</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let curso of cursos" [value]="curso.value">
+                            {{curso.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Semestre</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let semestre of semestres" [value]="semestre.value">
+                            {{semestre.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </mat-card>
+
+        </div>
+    </div>
+</div>
