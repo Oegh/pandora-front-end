@@ -1,0 +1,42 @@
+<h1 mat-dialog-title style="text-align: center;">Insertar asignatura de postgrado del Departamento</h1>
+<div mat-dialog-content style="text-align: center;">
+    <mat-divider></mat-divider>
+    <div class="section" style="padding-top: 0.5rem; width: 100%;">
+        <mat-form-field appearance="fill">
+            <mat-label>Curso</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let curso of cursos" [value]="curso.value">
+                    {{curso.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Semestre</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let semestre of semestres" [value]="semestre.value">
+                    {{semestre.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="section" style="width: 50%;" appearance="fill">
+            <mat-label>Asignatura</mat-label>
+            <input matInput placeholder="Base de Datos" value="">
+        </mat-form-field>
+        <mat-form-field class="section" appearance="fill">
+            <mat-label>Duración (Horas)</mat-label>
+            <input matInput placeholder="140" value="">
+        </mat-form-field>     
+    </div>
+    <mat-divider></mat-divider>
+    <div style="padding: 0.3rem; width: 100%; text-align: center;">
+        <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+</div>
+
+
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Aceptar</button>
+    <button mat-button (click)="onNoClick()">Cancelar</button>
+</div>
