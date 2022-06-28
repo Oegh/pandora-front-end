@@ -59,7 +59,7 @@ export class AuthComponent implements OnInit {
       this._authService.login(user).subscribe( async (loginData: any) => {
         await this.getUserData();
         console.log(2);
-        this.router.navigate(['']);
+        this.router.navigate(['/']);
       }, (error: HttpErrorResponse) => {
         if(error.status === 401) {
           this.authError = true;

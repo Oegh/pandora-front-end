@@ -30,8 +30,8 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~12.2.11",
-    "@angular/cli": "~12.2.11",
+    "@angular-devkit/build-angular": "^12.2.13",
+    "@angular/cli": "^12.2.17",
     "@angular/compiler-cli": "~12.2.11",
     "@types/feather-icons": "^4.7.0",
     "@types/jasmine": "~3.6.0",
@@ -43,5 +43,17 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.7.0",
     "typescript": "~4.2.4"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oegh/pandora-front-end.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oegh/pandora-front-end/issues"
+  },
+  "homepage": "https://github.com/Oegh/pandora-front-end#readme"
 }
