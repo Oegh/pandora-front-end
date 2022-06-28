@@ -14,7 +14,7 @@ import { Observable } from 'rxjs';
 export class AuthService {
 
  
-  private loginUrl = 'https://api.cujae.edu.cu/user/'
+  private loginUrl = 'https://apidev.cujae.edu.cu/user/login'
   private nodeApiUrl = 'http://localhost:4001'
   private url = this.nodeApiUrl;
   userToken: string | null = null;
@@ -42,7 +42,7 @@ export class AuthService {
 
     headers.append('Authorization', `Basic ${base64Pass}`);
 
-    return this._http.get(`${this.nodeApiUrl}/authenticate`, options).pipe(
+    return this._http.get(`${this.loginUrl}`, options).pipe(
       map( (res:any) => {
         this.saveToken( res['accessToken'], res['refreshToken'] );
         return res;
